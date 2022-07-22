@@ -1,0 +1,199 @@
+* {
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    --light-gray: rgb(123, 123, 123);
+    --light-blue: #1d2c42f0;
+    --translucent-white: rgba(255, 255, 255, 0.7);
+
+    --normal-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    --blur-filter: blur(8px);
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.base-label {
+    display: flex;
+    align-items: center;
+    pointer-events: all;
+}
+
+.delete-button {
+    padding: 6px;
+    border-radius: 1rem;
+    border: none;
+    margin-right: 8px;
+    height: 1.5rem;
+}
+
+.delete-button:hover {
+    cursor: pointer;
+}
+
+.label {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 8px;
+    backdrop-filter: blur(8px);
+    border-radius: 1rem;
+    pointer-events: all;
+}
+
+.measurementLabel {
+    font-family: monospace;
+    background-color: black;
+    color: white;
+}
+
+.stats-container {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    cursor: pointer;
+    opacity: 0.9;
+    z-index: 10000;
+}
+
+.toolbar {
+    display: flex;
+    flex-direction: row;
+}
+
+.toolbar a {
+    margin: 0.5rem;
+}
+
+.bottom {
+    bottom: 1rem;
+}
+
+/* From uiverse.io */
+.button {
+    padding: 0.7rem;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background: var(--translucent-white);
+    backdrop-filter: var(--blur-filter);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+.button:hover {
+    background-color: var(--light-blue);
+    box-shadow: 0px 15px 20px rgba(46, 104, 229, 0.4);
+    color: #fff;
+    fill: #fff;
+    transform: translateY(-7px);
+}
+
+.button:active {
+    transform: translateY(-1px);
+}
+
+.simple-card-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+}
+
+.viewBox {
+    animation: rotate4 2s linear infinite;
+}
+
+/* from https://github.com/mrdoob/three.js/blob/master/examples/main.css */
+#info {
+    color: #fff;
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: none;
+	z-index: 1; /* TODO Solve this in HTML */
+}
+
+
+#three-canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    background-color: black;
+}
+
+#loader-container {
+    position: fixed;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+
+#file-input{
+    
+ 
+
+}
+
+/* From uiverse.io by @barisdogansutcu */
+svg {
+    margin: 1rem;
+    width: 3.25em;
+    transform-origin: center;
+    
+   }
+   
+   circle {
+    fill: none;
+    stroke: hsl(214, 97%, 59%);
+    stroke-width: 2;
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    animation: dash4 1.5s ease-in-out infinite;
+   }
+   
+   @keyframes rotate4 {
+    100% {
+     transform: rotate(360deg);
+    }
+   }
+   
+   @keyframes dash4 {
+    0% {
+     stroke-dasharray: 1, 200;
+     stroke-dashoffset: 0;
+    }
+   
+    50% {
+     stroke-dasharray: 90, 200;
+     stroke-dashoffset: -35px;
+    }
+   
+    100% {
+     stroke-dashoffset: -125px;
+    }
+   }

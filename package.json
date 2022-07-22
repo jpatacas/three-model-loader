@@ -1,0 +1,22 @@
+{
+  "name": "three-model-loader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c ./rollup.config.js",
+    "watch": "rollup -w -c ./rollup.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "rollup": "^2.76.0"
+  },
+  "dependencies": {
+    "camera-controls": "^1.34.7",
+    "stats.js": "^0.17.0",
+    "three": "^0.142.0"
+  }
+}
